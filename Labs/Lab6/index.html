@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lab 6 - Like and Dislike System</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Like and Dislike System</h1>
+
+    <div class="container">
+
+        <!-- Like and Dislike Buttons -->
+        <div class="voting-section">
+
+    <button id="likeBtn">
+        👍 <span id="likeCount">0</span>
+    </button>
+
+    <button id="dislikeBtn">
+        👎 <span id="dislikeCount">0</span>
+    </button>
+
+</div>
+
+        <!-- Comment Section -->
+        <div class="comment-section">
+
+            <h2>Comments</h2>
+
+            <input type="text" id="commentInput" placeholder="Write your comment...">
+
+            <button id="submitComment">
+                Submit Comment
+            </button>
+            <button id="clearComment">Clear</button>
+            <div id="commentsList"></div>
+
+        </div>
+
+        <!-- Reset Button -->
+        <div class="reset-section">
+
+            <button id="resetBtn">
+                Reset
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Back to Labs -->
+    <a href="../Labs.html">Back to Labs</a>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,12 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Amal Aljohani | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const saved = localStorage.getItem("portfolio-theme");
+        const theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute("data-theme");
+            const next = current === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", next);
+            localStorage.setItem("portfolio-theme", next);
+            updateThemeButton();
+        }
+        function updateThemeButton() {
+            const button = document.getElementById("themeButton");
+            if (button) {
+                button.textContent = document.documentElement.getAttribute("data-theme") === "dark" ? "☀ Light" : "☾ Dark";
+            }
+        }
+        document.addEventListener("DOMContentLoaded", updateThemeButton);
+    </script>
 </head>
+
 <body>
-    <h1>Amal Aljohani</h1>
-    <a href = "Labs/Labs.html">Labs</a>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">amal</a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html" class="active" aria-current="page">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="Labs/Labs.html">Projects & Labs</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle" id="themeButton" type="button" onclick="toggleTheme()">☾ Dark</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="section-label">Information Technology / King Abdulaziz University</p>
+
+                <h1>AMAL<br><span class="accent-text">ALJOHANI</span></h1>
+
+                <div class="hero-line"></div>
+
+                <p class="hero-subtitle">Hello, I'm Amal Aljohani.</p>
+
+                <p class="hero-description">
+                    I'm an Information Technology student at King Abdulaziz
+                    University with interests in software engineering,
+                    artificial intelligence, networking, and cybersecurity.
+                </p>
+
+                <div class="btn-row">
+                    <a href="Labs/Labs.html" class="btn btn-primary">Explore Projects ↗</a>
+                    <a href="Amal_Aljohani_CV.pdf" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-outline">View My CV ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED WORK -->
+        <section class="section">
+            <div class="container">
+                <p class="section-label">01 / Highlights</p>
+                <h2 class="section-heading">Selected Work.</h2>
+
+                <div class="highlight-grid">
+                    <article class="highlight-card featured-highlight">
+                        <p class="section-label">Featured Project</p>
+                        <h3>Weam | وئام</h3>
+                        <p>
+                            An Arabic-first platform that helps guardians
+                            and professionals coordinate a child's care.
+                        </p>
+                        <a href="Labs/Labs.html#weam" class="text-link">View Project ↗</a>
+                    </article>
+
+                    <article class="highlight-card">
+                        <p class="section-label">Professional Experience</p>
+                        <h3>Jeddah Municipality.</h3>
+                        <p>Digital Transformation Agency</p>
+                        <p class="small-muted">Government Internship · Summer 2026</p>
+                        <a href="cv.html#internship" class="text-link">View Experience ↗</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO OVERVIEW -->
+        <section class="section section-alt">
+            <div class="container">
+                <p class="section-label">02 / Portfolio Overview</p>
+                <h2 class="section-heading">Explore My Portfolio.</h2>
+
+                <div class="domain-grid">
+                    <article class="domain-item">
+                        <span class="number">01</span>
+                        <h3>CV</h3>
+                        <p class="small-muted">Education, experience, skills, and achievements.</p>
+                        <a href="cv.html" class="text-link">Explore ↗</a>
+                    </article>
+
+                    <article class="domain-item">
+                        <span class="number">02</span>
+                        <h3>Projects</h3>
+                        <p class="small-muted">Selected technical and academic work.</p>
+                        <a href="Labs/Labs.html#technical-projects" class="text-link">Explore ↗</a>
+                    </article>
+
+                    <article class="domain-item">
+                        <span class="number">03</span>
+                        <h3>Course Labs</h3>
+                        <p class="small-muted">CPIT405 web development exercises.</p>
+                        <a href="Labs/Labs.html#coursework" class="text-link">Explore ↗</a>
+                    </article>
+
+                    <article class="domain-item">
+                        <span class="number">04</span>
+                        <h3>Contact</h3>
+                        <p class="small-muted">Professional links and contact information.</p>
+                        <a href="contact.html" class="text-link">Explore ↗</a>
+                    </article>
+                </div>
+
+                <p class="small-muted" style="margin-top:35px;">
+                    Student ID: 2306638
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>© 2026 Amal Aljohani. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/iamAmalMMA" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/iamamalmma/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
+

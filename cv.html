@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Amal Aljohani</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const saved = localStorage.getItem("portfolio-theme");
+        document.documentElement.setAttribute("data-theme",
+            saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute("data-theme");
+            const next = current === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", next);
+            localStorage.setItem("portfolio-theme", next);
+            updateThemeButton();
+        }
+        function updateThemeButton() {
+            const button = document.getElementById("themeButton");
+            if (button) button.textContent =
+                document.documentElement.getAttribute("data-theme") === "dark" ? "☀ Light" : "☾ Dark";
+        }
+        document.addEventListener("DOMContentLoaded", updateThemeButton);
+    </script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">amal<span>.</span></a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="cv.html" class="active" aria-current="page">CV</a>
+                <a href="Labs/Labs.html">Projects & Labs</a>
+                <a href="contact.html">Contact</a>
+                <button id="themeButton" class="theme-toggle" type="button" onclick="toggleTheme()">☾ Dark</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <p class="section-label">Professional Profile</p>
+                <h1>Curriculum <span class="accent-text">Vitae.</span></h1>
+                <p>Education, experience, technical skills, and professional development.</p>
+                <div class="btn-row">
+                    <a class="btn btn-primary" href="Amal_Aljohani_CV.pdf" target="_blank"
+                        rel="noopener noreferrer">View My CV ↗</a>
+                    <a class="btn btn-outline" href="Amal_Aljohani_CV.pdf" download>Download PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container cv-layout">
+
+                <!-- SIDEBAR -->
+                <aside class="cv-sidebar">
+                    <section>
+                        <h2>Amal Aljohani</h2>
+                        <p>Information Technology Student</p>
+                        <p>King Abdulaziz University</p>
+                        <p>Jeddah, Saudi Arabia</p>
+                    </section>
+
+                    <section>
+                        <h2>Technical Skills</h2>
+
+                        <h3>Programming & Web</h3>
+                        <p>Java, Python, PHP, HTML, CSS, SQL, TypeScript, React</p>
+
+                        <h3>Backend, Data & AI</h3>
+                        <p>FastAPI, MySQL, PostgreSQL, Llama 3.1, LoRA, Ollama, NumPy</p>
+
+                        <h3>Networking & Security</h3>
+                        <p>VLANs, Routing, DHCP, Cisco Packet Tracer, AES</p>
+
+                        <h3>Tools & Engineering</h3>
+                        <p>Git, GitHub, Docker, UML, ERD, SDLC, Testing, Power BI</p>
+                    </section>
+
+                    <section>
+                        <h2>Education</h2>
+                        <h3>Bachelor's in Information Technology</h3>
+                        <p>King Abdulaziz University</p>
+                        <p>Aug 2022 – Jun 2027</p>
+                    </section>
+
+                    <section>
+                        <h2>Professional Links</h2>
+                        <p><a class="text-link" href="https://github.com/iamAmalMMA" target="_blank"
+                                rel="noopener noreferrer">GitHub ↗</a></p>
+                        <p><a class="text-link" href="https://www.linkedin.com/in/iamamalmma/" target="_blank"
+                                rel="noopener noreferrer">LinkedIn ↗</a></p>
+                        <p><a class="text-link" href="mailto:amaljohani05@gmail.com">Email ↗</a></p>
+                    </section>
+                </aside>
+
+                <!-- MAIN CONTENT -->
+                <div class="cv-main">
+
+                    <section class="cv-section">
+                        <p class="section-label">01 / About</p>
+                        <h2>Professional Profile.</h2>
+                        <p>
+                            Information Technology student with hands-on experience
+                            in software engineering, backend development,
+                            AI integration, and database design.
+                        </p>
+                    </section>
+
+                    <section class="cv-section" id="internship">
+                        <p class="section-label">02 / Experience</p>
+                        <h2>Professional Experience.</h2>
+
+                        <article class="case-study">
+                            <p class="entry-meta">June – August 2026</p>
+                            <h3>Jeddah Municipality.</h3>
+                            <p><strong>Information Technology Intern</strong></p>
+                            <p>Digital Transformation Agency · Spending Efficiency Department</p>
+
+                            <ul class="bullet-list">
+                                <li>Refactored backend architecture using PHP APIs.</li>
+                                <li>Integrated a local FastAPI and Llama 3.1 AI service.</li>
+                                <li>Contributed to MySQL and database design.</li>
+                                <li>Prepared a 525-entry dataset and Python automation.</li>
+                                <li>Performed testing, debugging, and documentation.</li>
+                            </ul>
+
+                            <div class="tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">AI</span>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section class="cv-section">
+                        <p class="section-label">03 / Projects</p>
+                        <h2>Technical Projects.</h2>
+
+                        <article class="cv-entry">
+                            <h3>Weam | وئام</h3>
+                            <p>
+                                Arabic-first care coordination platform with shared
+                                records, permissions, and AI-assisted workflows.
+                            </p>
+                            <p class="entry-meta">Technical Lead / Developer</p>
+                            <a class="text-link" href="https://github.com/iamAmalMMA/Weam-Platform" target="_blank"
+                                rel="noopener noreferrer">View Project ↗</a>
+                        </article>
+
+                        <article class="cv-entry">
+                            <h3>Smart Idea Evaluation System</h3>
+                            <p>PHP/MySQL platform integrated with a local AI evaluation service.</p>
+                            <a class="text-link" href="https://github.com/iamAmalMMA/AI-Idea-Evaluation-System"
+                                target="_blank" rel="noopener noreferrer">View Project ↗</a>
+                        </article>
+
+                        <article class="cv-entry">
+                            <h3>Enterprise Campus Network Design</h3>
+                            <p>Multi-campus network with VLANs, routing, DHCP, and internal services.</p>
+                            <a class="text-link" href="https://github.com/iamAmalMMA/enterprise-campus-network-design"
+                                target="_blank" rel="noopener noreferrer">View Project ↗</a>
+                        </article>
+
+                        <article class="cv-entry">
+                            <h3>AES Docker Encryption Application</h3>
+                            <p>Java AES application using Docker and GitHub Actions.</p>
+                            <a class="text-link" href="https://github.com/iamAmalMMA/aes-docker-encryption"
+                                target="_blank" rel="noopener noreferrer">View Project ↗</a>
+                        </article>
+
+                        <article class="cv-entry">
+                            <h3>HR Leave Management System</h3>
+                            <p>Java HR application using object-oriented design and UML.</p>
+                            <a class="text-link" href="https://github.com/iamAmalMMA/hr-leave-management-system"
+                                target="_blank" rel="noopener noreferrer">View Project ↗</a>
+                        </article>
+                    </section>
+
+                    <section class="cv-section" id="certifications">
+                        <p class="section-label">04 / Credentials</p>
+                        <h2>Certifications & Development.</h2>
+
+                        <div class="pathway">
+                            <h3>Featured Credentials</h3>
+
+                            <div class="credential-row">
+                                <div><strong>McKinsey.org Forward</strong><span>Professional Development · 2026</span>
+                                </div>
+                                <a href="certificates/forward.png" target="_blank" rel="noopener noreferrer">View ↗</a>
+                            </div>
+                            <div class="credential-row">
+                                <div><strong>Advanced Cybersecurity Training</strong><span>KAUST + NCA · 40 Hours</span>
+                                </div>
+                                <a href="certificates/kaust-advanced.pdf" target="_blank" rel="noopener noreferrer">View
+                                    ↗</a>
+                            </div>
+                            <div class="credential-row">
+                                <div><strong>CompTIA Security+ Training</strong><span>Courslia · 50 Hours · Training
+                                        Completion</span></div>
+                                <a href="certificates/security-plus.jpg" target="_blank" rel="noopener noreferrer">View
+                                    ↗</a>
+                            </div>
+                        </div>
+
+                        <div class="pathway">
+                            <h3>ISC2 Cybersecurity Series</h3>
+                            <div class="credential-row">
+                                <div><strong>Security Principles</strong></div>
+                                <a href="certificates/isc2-security-principles.pdf" target="_blank"
+                                    rel="noopener noreferrer">View ↗</a>
+                            </div>
+                            <div class="credential-row">
+                                <div><strong>Access Control Concepts</strong></div>
+                                <a href="certificates/isc2-access-control.pdf" target="_blank"
+                                    rel="noopener noreferrer">View ↗</a>
+                            </div>
+                            <div class="credential-row">
+                                <div><strong>Network and Communications Security</strong></div>
+                                <a href="certificates/isc2-network-security.pdf" target="_blank"
+                                    rel="noopener noreferrer">View ↗</a>
+                            </div>
+                            <div class="credential-row">
+                                <div><strong>Security Operations</strong></div>
+                                <a href="certificates/isc2-security-operations.pdf" target="_blank"
+                                    rel="noopener noreferrer">View ↗</a>
+                            </div>
+                            <div class="credential-row">
+                                <div><strong>Incident Response and Recovery</strong></div>
+                                <a href="certificates/isc2-incident-response.pdf" target="_blank"
+                                    rel="noopener noreferrer">View ↗</a>
+                            </div>
+                            <div class="credential-row">
+                                <div><strong>Systems and Application Security</strong></div>
+                                <a href="certificates/isc2-systems-security.pdf" target="_blank"
+                                    rel="noopener noreferrer">View ↗</a>
+                            </div>
+                        </div>
+
+                        <div class="pathway">
+                            <h3>Additional Development</h3>
+
+                            <div class="credential-row">
+                                <div><strong>Introductory Cybersecurity Training</strong><span>KAUST + NCA</span></div>
+                                <a href="certificates/kaust-intro.pdf" target="_blank" rel="noopener noreferrer">View
+                                    ↗</a>
+                            </div>
+                            <div class="credential-row">
+                                <div><strong>Introduction to Cybersecurity Essentials</strong><span>IBM /
+                                        Coursera</span></div>
+                                <a href="certificates/ibm-cybersecurity.pdf" target="_blank"
+                                    rel="noopener noreferrer">View ↗</a>
+                            </div>
+                            <div class="credential-row">
+                                <div><strong>Principles of Secure Coding</strong><span>UC Davis / Coursera</span></div>
+                                <a href="certificates/uc-davis-secure-coding.pdf" target="_blank"
+                                    rel="noopener noreferrer">View ↗</a>
+                            </div>
+                            <div class="credential-row">
+                                <div>
+                                    <strong>AI Hackathon — ICDR 2026</strong>
+                                    <span>
+                                        King Salman Center for Disability Research ·
+                                        Certificate of Participation
+                                    </span>
+                                </div>
+                                <a href="certificates/ai-hackathon.pdf" target="_blank" rel="noopener noreferrer">
+                                    View ↗
+                                </a>
+                            </div>
+                    </section>
+
+                    <!-- LEADERSHIP & COMMUNITY -->
+                    <section class="cv-section">
+
+                        <p class="section-label">05 / Activities</p>
+                        <h2>Leadership & Community.</h2>
+
+                        <div class="cv-entry">
+                            <span class="entry-meta">Apr 2026 – Present</span>
+                            <h3>Cyber She</h3>
+                            <p>Public Relations</p>
+                        </div>
+                        <div class="cv-entry">
+                            <span class="entry-meta">Jun 2025 – Present</span>
+                            <h3>Cybersecurity Club</h3>
+                            <p>
+                                Public Relations · King Abdulaziz University
+                            </p>
+                        </div>
+
+                        <div class="cv-entry">
+                            <span class="entry-meta">Oct 2025 – Present</span>
+                            <h3>IEEE KAU Student Branch</h3>
+                            <p>
+                                Content Writer · King Abdulaziz University
+                            </p>
+                        </div>
+                        <div class="cv-entry">
+                            <span class="entry-meta">Oct 2025 – Present</span>
+                            <h3>Taqreeb</h3>
+                            <p>Public Relations</p>
+                        </div>
+                        <div class="cv-entry">
+                            <span class="entry-meta">Oct 2025 – Jun 2026</span>
+                            <h3>Microsoft LSAC</h3>
+                            <p>
+                                Planning Member · King Abdulaziz University
+                            </p>
+                        </div>
+
+                        <div class="cv-entry">
+                            <span class="entry-meta">Oct 2024 – Jun 2025</span>
+                            <h3>Programming Club</h3>
+                            <p>
+                                Planning & Events · King Abdulaziz University
+                            </p>
+                        </div>
+
+
+                    </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>© 2026 Amal Aljohani. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="Labs/Labs.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

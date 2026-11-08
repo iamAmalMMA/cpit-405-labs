@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Amal Aljohani</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const saved = localStorage.getItem("portfolio-theme");
+        document.documentElement.setAttribute("data-theme",
+            saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute("data-theme");
+            const next = current === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", next);
+            localStorage.setItem("portfolio-theme", next);
+            updateThemeButton();
+        }
+        function updateThemeButton() {
+            const button = document.getElementById("themeButton");
+            if (button) button.textContent =
+                document.documentElement.getAttribute("data-theme") === "dark" ? "☀ Light" : "☾ Dark";
+        }
+        document.addEventListener("DOMContentLoaded", updateThemeButton);
+    </script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">amal<span>.</span></a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="Labs/Labs.html">Projects & Labs</a>
+                <a href="contact.html" class="active" aria-current="page">Contact</a>
+                <button id="themeButton" class="theme-toggle" type="button" onclick="toggleTheme()">☾ Dark</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <p class="section-label">Professional Contact</p>
+                <h1>Contact <span class="accent-text">Me.</span></h1>
+                <p>Feel free to reach out for opportunities or collaboration.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container contact-grid">
+                <div>
+                    <p class="section-label">01 / Connect</p>
+                    <h2 class="section-heading">Let's Connect.</h2>
+
+                    <div class="contact-details">
+                        <div class="contact-link">
+                            <span>Personal Email</span>
+                            <a href="mailto:amaljohani05@gmail.com">
+                                amaljohani05@gmail.com
+                            </a>
+                        </div>
+
+                        <div class="contact-link">
+                            <span>University Email</span>
+                            <a href="mailto:aaljahni0005@stu.kau.edu.sa">
+                                aaljahni0005@stu.kau.edu.sa
+                            </a>
+                        </div>
+
+                        <div class="contact-link">
+                            <span>GitHub</span>
+                            <a href="https://github.com/iamAmalMMA" target="_blank" rel="noopener noreferrer">
+                                View GitHub ↗
+                            </a>
+                        </div>
+
+                        <div class="contact-link">
+                            <span>LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/iamamalmma/" target="_blank" rel="noopener noreferrer">
+                                View LinkedIn ↗
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="https://formsubmit.co/amaljohani05@gmail.com" method="POST">
+
+                    <p class="section-label">02 / Message</p>
+                    <h2>Send a Message.</h2>
+
+                    <input type="hidden" name="_subject" value="Portfolio Contact Message">
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message ↗</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>© 2026 Amal Aljohani. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="Labs/Labs.html">Projects</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+

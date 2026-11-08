@@ -4,19 +4,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CPIT405 Labs</title>
+    <title>Projects & Labs | Amal Aljohani</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        const saved = localStorage.getItem("portfolio-theme");
+        document.documentElement.setAttribute("data-theme",
+            saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute("data-theme");
+            const next = current === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", next);
+            localStorage.setItem("portfolio-theme", next);
+            updateThemeButton();
+        }
+        function updateThemeButton() {
+            const button = document.getElementById("themeButton");
+            if (button) button.textContent =
+                document.documentElement.getAttribute("data-theme") === "dark" ? "☀ Light" : "☾ Dark";
+        }
+        document.addEventListener("DOMContentLoaded", updateThemeButton);
+    </script>
 </head>
 
 <body>
-    <h1>Labs</h1>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">amal<span>.</span></a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="../cv.html">CV</a>
+                <a href="Labs.html" class="active" aria-current="page">Projects & Labs</a>
+                <a href="../contact.html">Contact</a>
+                <button id="themeButton" class="theme-toggle" type="button" onclick="toggleTheme()">☾ Dark</button>
+            </nav>
+        </div>
+    </header>
 
-    <ul>
-        <li><a href="Lab1.html">Lab 1</a></li>
-        <li><a href="Lab2.html">Lab 2</a></li>
-        <li><a href="Lab3.html">Lab 3</a></li>
-    </ul>
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <p class="section-label">Technical Portfolio</p>
+                <h1>Labs & <span class="accent-text">Projects.</span></h1>
+                <p>CPIT405 coursework and selected technical projects.</p>
+            </div>
+        </section>
 
-    <a href="../index.html">Back to Home</a>
+        <!-- FEATURED PROJECT -->
+        <section class="section" id="weam">
+            <div class="container">
+                <article class="project-feature">
+                    <p class="section-label">01 / Featured Project</p>
+                    <h2>Weam | وئام</h2>
+                    <p>
+                        An Arabic-first platform connecting guardians and
+                        professionals to coordinate children's care through
+                        shared records, follow-ups, and AI-assisted features.
+                    </p>
+                    <p><strong>Role:</strong> Technical Lead / Developer</p>
+
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">AI</span>
+                    </div>
+
+                    <a class="btn btn-light" href="https://github.com/iamAmalMMA/Weam-Platform" target="_blank"
+                        rel="noopener noreferrer">GitHub Repository ↗</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section section-alt" id="technical-projects">
+            <div class="container">
+                <p class="section-label">02 / Technical Work</p>
+                <h2 class="section-heading">Selected Projects.</h2>
+
+                <article class="project-row">
+                    <span class="project-number">01</span>
+                    <div>
+                        <h3>Smart Idea Evaluation System</h3>
+                        <p>
+                            An AI-powered platform for managing and evaluating
+                            ideas, developed during my internship at
+                            Jeddah Municipality using PHP, FastAPI, and local AI.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Llama 3.1</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/iamAmalMMA/AI-Idea-Evaluation-System" target="_blank"
+                        rel="noopener noreferrer">GitHub ↗</a>
+                </article>
+
+                <article class="project-row">
+                    <span class="project-number">02</span>
+                    <div>
+                        <h3>Enterprise Campus Network Design</h3>
+                        <p>
+                            A multi-campus network designed using Cisco Packet
+                            Tracer, VLANs, routing, and DHCP to connect
+                            departments, buildings, and network services.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Cisco Packet Tracer</span>
+                            <span class="tag">VLANs</span>
+                            <span class="tag">RIPv2</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/iamAmalMMA/enterprise-campus-network-design" target="_blank"
+                        rel="noopener noreferrer">GitHub ↗</a>
+                </article>
+
+                <article class="project-row">
+                    <span class="project-number">03</span>
+                    <div>
+                        <h3>AES Docker Encryption Application</h3>
+                        <p>
+                            A Java AES encryption and decryption application
+                            containerized with Docker and integrated with
+                            GitHub Actions for automated builds.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">AES</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/iamAmalMMA/aes-docker-encryption" target="_blank"
+                        rel="noopener noreferrer">GitHub ↗</a>
+                </article>
+
+                <article class="project-row">
+                    <span class="project-number">04</span>
+                    <div>
+                        <h3>HR Leave Management System</h3>
+                        <p>
+                            A Java-based HR system for managing employee
+                            records, leave requests, and reports, developed
+                            using object-oriented programming and UML.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">OOP</span>
+                            <span class="tag">UML</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/iamAmalMMA/hr-leave-management-system" target="_blank"
+                        rel="noopener noreferrer">GitHub ↗</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- COURSEWORK -->
+        <section class="section" id="coursework">
+            <div class="container">
+                <p class="section-label">03 / Course Work</p>
+                <h2 class="section-heading">CPIT405 Labs.</h2>
+
+                <div class="lab-grid">
+                    <article class="lab-card">
+                        <span class="lab-number">01</span>
+                        <h3>HTML Basics</h3>
+                        <p>HTML structure and basic elements.</p>
+                        <a href="Lab1.html" class="text-link">Open Lab ↗</a>
+                    </article>
+
+                    <article class="lab-card">
+                        <span class="lab-number">02</span>
+                        <h3>HTML Elements</h3>
+                        <p>HTML content and document organization.</p>
+                        <a href="Lab2.html" class="text-link">Open Lab ↗</a>
+                    </article>
+
+                    <article class="lab-card">
+                        <span class="lab-number">03</span>
+                        <h3>CSS Styling</h3>
+                        <p>Selectors, colors, and layouts.</p>
+                        <a href="Lab3.html" class="text-link">Open Lab ↗</a>
+                    </article>
+
+                    <article class="lab-card">
+                        <span class="lab-number">05</span>
+                        <h3>DOM & Events</h3>
+                        <p>Interactive NBA stats dashboard.</p>
+                        <a href="Lab5/index.html" class="text-link">Open Lab ↗</a>
+                    </article>
+
+                    <article class="lab-card">
+                        <span class="lab-number">06</span>
+                        <h3>Cookies & Events</h3>
+                        <p>Voting and comments using cookies.</p>
+                        <a href="Lab6/index.html" class="text-link">Open Lab ↗</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>© 2026 Amal Aljohani. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="../cv.html">CV</a>
+                <a href="../contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
+

@@ -1,0 +1,86 @@
+/* General Page Styling */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    max-width: 650px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Voting Section */
+
+.voting-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 10px 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background-color: #e8e8e8;
+}
+
+button:hover {
+    background-color: #d5d5d5;
+}
+
+.voting-section span {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+/* Comments Section */
+
+.comment-section {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+#commentInput {
+    width: 65%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+#commentsList {
+    margin-top: 20px;
+}
+
+.comment-item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Reset Section */
+
+.reset-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#resetBtn {
+    background-color: #e5b4b4;
+}
+
+#resetBtn:hover {
+    background-color: #d99b9b;
+}
