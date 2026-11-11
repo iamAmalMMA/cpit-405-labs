@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lab 7 - Unsplash Image Search</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Unsplash Image Search</h1>
+        <p>Search for images using the Unsplash API.</p>
+
+        <div class="search-section">
+
+            <input type="text"
+                   id="searchInput"
+                   placeholder="Search for images...">
+
+            <select id="methodSelect">
+                <option value="xhr">XMLHttpRequest</option>
+                <option value="promises">Fetch with Promises</option>
+                <option value="async">Fetch with Async/Await</option>
+            </select>
+
+            <button id="searchBtn">Search</button>
+
+        </div>
+
+        <p id="statusMessage"></p>
+
+        <div id="imageResults" class="image-grid"></div>
+
+    </div>
+
+    <a href="../Labs.html">Back to Labs</a>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
